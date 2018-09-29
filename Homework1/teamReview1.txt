@@ -1,0 +1,9 @@
+I find their idea very interesting because they identified a need that people have and a way that they can fix it.  It is a unique idea 
+that has the potential to be helpful.  I think that they’re right that one of the biggest hurtles to adoption is finding the right animal.  
+The main part of their app seems to be connecting dog breeds with personalities, but if they could take it a step farther and connect 
+them with actual animals ready to be adopted it would be truly amazing.  However, I’d be surprised if they’d have the time to implement 
+this given how little they have to make the app.  Their vision statement is well written because I was able to get a good idea of their 
+end goal for their project from it.  
+
+Their prototype code looks good besides there isn’t any documentation.  However, given that it is just a hello world app at the moment, 
+I am not worried about it.
