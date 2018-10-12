@@ -1,0 +1,17 @@
+1.1) The Basic Activity template provides a toggle switch
+     for a setting, but the Settings Activity template provides
+     a pre-populated settings menu with different setting groups.
+
+1.2) Task 1 uses the Basic Activity template to tie a setting to a
+     certain value and creates a brand new app to demonstrate this.
+     Task 2 uses the Settings Activity template to make a multi-
+     level settings menu in our existing Droid Cafe app that we 
+     created in lab two weeks ago.
+
+2.5.i) Testing the app on a larger screen devices ensures that the
+       settings activity we created correctly uses the master/detail
+       screen layout (i.e. a header link for each group on the left
+       and the group of associated settings on the right).
+
+2.5.ii) The fragments are defined in an activity's layout file.
+        They're defined quite similarly to views.
