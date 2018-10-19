@@ -17,12 +17,13 @@ public class NetworkUtils {
 
 
     private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
-    static String getBookInfo(String queryString) {
+
+    static String getPlayerInfo(String queryString) {
         Log.d(LOG_TAG, queryString);
         if (queryString == "-1") {
             HttpURLConnection urlConnection = null;
             BufferedReader reader = null;
-            String bookJSONString = null;
+            String playerJSONString = null;
             try {
                 URL requestURL = new URL(Monopoly_URL.toString());
                 urlConnection = (HttpURLConnection) requestURL.openConnection();
@@ -46,7 +47,7 @@ public class NetworkUtils {
                     // Stream was empty.  No point in parsing.
                     return null;
                 }
-                bookJSONString = buffer.toString();
+                playerJSONString = buffer.toString();
             } catch (IOException e) {
                 e.printStackTrace();
                 return null;
@@ -62,12 +63,12 @@ public class NetworkUtils {
                     }
                 }
             }
-            Log.d(LOG_TAG, bookJSONString);
-            return bookJSONString;
+            Log.d(LOG_TAG, playerJSONString);
+            return playerJSONString;
         }   else {
             HttpURLConnection urlConnection = null;
             BufferedReader reader = null;
-            String bookJSONString = null;
+            String playerJSONString = null;
             try {
                 String specURL = Monopoly_ID_URL + queryString;
                 URL requestURL = new URL(specURL.toString());
@@ -92,7 +93,7 @@ public class NetworkUtils {
                     // Stream was empty.  No point in parsing.
                     return null;
                 }
-                bookJSONString = buffer.toString();
+                playerJSONString = buffer.toString();
             } catch (IOException e) {
                 e.printStackTrace();
                 return null;
@@ -108,8 +109,10 @@ public class NetworkUtils {
                     }
                 }
             }
-            Log.d(LOG_TAG, bookJSONString);
-            return bookJSONString;
+            Log.d(LOG_TAG, playerJSONString);
+            return playerJSONString;
         }
     }
 }
+
+
