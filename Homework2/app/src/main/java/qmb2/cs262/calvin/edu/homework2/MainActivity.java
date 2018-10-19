@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             getSupportLoaderManager().initLoader(0,null,this);
         }
 
-        String queryString = "base";
+        String queryString = "-1";
 
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     public void searchBooks(View view) {
         String queryString = mBookInput.getText().toString();
-        if (queryString.length() == 0) {
-            queryString = "base";
+        if (queryString.toString().length() == 0) {
+            queryString = "-1";
         }
         InputMethodManager inputManager = (InputMethodManager)
                 getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -164,11 +164,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     mBookInput.setText("");
                 } else {
                     // If none are found, update the UI to show failed results.
-                    mTitleText.setText("2");
+                    mTitleText.setText("No results found");
                 }
             } catch (Exception q) {
                 // If onPostExecute does not receive a proper JSON string, update the UI to show failed results.
-                mTitleText.setText("1");
+                mTitleText.setText("Please enter nothing or a valid ID number.");
                 e.printStackTrace();
             }
         }

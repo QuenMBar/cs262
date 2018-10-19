@@ -18,7 +18,8 @@ public class NetworkUtils {
 
     private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
     static String getBookInfo(String queryString) {
-        if ("base" == "base") {
+        Log.d(LOG_TAG, queryString);
+        if (queryString == "-1") {
             HttpURLConnection urlConnection = null;
             BufferedReader reader = null;
             String bookJSONString = null;
