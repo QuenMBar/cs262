@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab05</string>
+    <string name="button_text">Fetch</string>
+    <string name="input_hint">Enter a player ID</string>
+    <string name="loading_text">loading...</string>
+    <string name="no_results">No Results Found</string>
+</resources>
