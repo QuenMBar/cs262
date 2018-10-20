@@ -1,0 +1,9 @@
+New gameDatabase model:
+
+Player(ID, emailAddress, name)
+PlayerGame(ID, gameID, playerID, score, cash, location)
+PlayerGameProperty(PlayerGameID, propertyID, numHouses, numHotels)
+Game(ID, time)
+Property(ID, name)
+
+-- note: all columns named 'ID' are primary keys (4 in total, every table but PlayerGameProperty)
