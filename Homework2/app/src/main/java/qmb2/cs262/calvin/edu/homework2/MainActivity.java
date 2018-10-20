@@ -25,6 +25,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -59,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
         if (networkInfo != null && networkInfo.isConnected() && queryString.length()!=0) {
-            mPlayerText.setText(R.string.loading_text);
             Bundle queryBundle = new Bundle();
             queryBundle.putString("queryString", queryString);
             getSupportLoaderManager().restartLoader(0, queryBundle, this);
@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         else {
             if (queryString.length() == 0) {
-                mPlayerText.setText("Please enter a search term");
+                displayToast("Please enter a search term");
             } else {
-                mPlayerText.setText("Please check your network connection and try again.");
+                displayToast("Please check your network connection and try again.");
             }
         }
     }
@@ -98,22 +98,29 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         return super.onOptionsItemSelected(item);
     }
 
+    public void displayToast(String message) {
+        Toast.makeText(getApplicationContext(), message,
+                Toast.LENGTH_SHORT).show();
+    }
+
     public void searchPlayers(View view) {
         String queryString = mPlayerInput.getText().toString();
         if (queryString.toString().length() == 0) {
             queryString = "-1";
         }
-        InputMethodManager inputManager = (InputMethodManager)
-                getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
-                InputMethodManager.HIDE_NOT_ALWAYS);
+
+        try {
+            InputMethodManager inputManager = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.hideSoftInputFromWindow(getCurrentFocus().getApplicationWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
+        } catch (Exception e) { }
 
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
         if (networkInfo != null && networkInfo.isConnected() && queryString.length()!=0) {
-            mPlayerText.setText(R.string.loading_text);
             Bundle queryBundle = new Bundle();
             queryBundle.putString("queryString", queryString);
             getSupportLoaderManager().restartLoader(0, queryBundle, this);
@@ -121,9 +128,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         else {
             if (queryString.length() == 0) {
-                mPlayerText.setText("Please enter a search term");
+                displayToast("Please enter a search term");
             } else {
-                mPlayerText.setText("Please check your network connection and try again.");
+                displayToast("Please check your network connection and try again.");
             }
         }
     }
@@ -181,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 mPlayerInput.setText("");
             } else {
                 // If none are found, update the UI to show failed results.
-                mPlayerText.setText("2");
+                displayToast("No results found");
             }
 
         } catch(Exception e) {
@@ -203,11 +210,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     mPlayerInput.setText("");
                 } else {
                     // If none are found, update the UI to show failed results.
-                    mPlayerText.setText("No results found");
+                    displayToast("No results found");
                 }
             } catch (Exception q) {
                 // If onPostExecute does not receive a proper JSON string, update the UI to show failed results.
-                mPlayerText.setText("Please enter nothing or a valid ID number.");
+                displayToast("Please enter nothing or a valid ID number.");
                 e.printStackTrace();
             }
         }
