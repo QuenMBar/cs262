@@ -1,0 +1,15 @@
+a. Do their project management materials show the appropriate amount of activity?
+	Yes, while sprint 4 looks a little bare, their earlier sprints I think make up for it.  While they have a lot of the individual 
+	components done, they still need to stitch them all together.
+b. Write a one-to-two-paragraph review of their models. Is their database schema well-formulated?
+	Their ui model is very well put together.  It shows everything that’s needed and doesn’t get too cluttered.  Their domain model 
+	is nice and simple.  It has connection between dogs and humans, which is all that their app needs and makes their app understandable.  
+	Finally, their database model is a lot more complex.  Since they have a lot of data to keep track of, this is understandable.  But the 
+	model is well thought out and shouldn’t be that hard to implement.
+c. Has there been an appropriate amount of code pushed into their client and server repos? Can you run the prototype and/or the database?
+	Their database doesn’t seem to be working yet, but I can run their demo.  Its still fairly skeletal in terms for design and functionality, 
+	but they have all the frame work in place to make everything they wanted to.  However, I am a little worried with how much they have left to do.
+d. Was their design presentation effective? What worked? What didn’t work? How would you rate their presentation relative to the others?
+	I think it worked very well.  First, all their slides were very well thought out, and were entertaining and it helped keep people engaged.  
+	Second, they demonstrated their app well, and I think really sold the idea for their app.  They always made sure to talk about how this 
+	app would help people find dogs to adopt.  

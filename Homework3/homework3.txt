@@ -1,0 +1,12 @@
+a. Is the service RESTful? If not, why not? If so, what key features make it RESTful.
+	Yes, this service is restful because it uses the http methods and is stateless.  It doesn’t remember the 
+	previous methods that were used so it is stateless.  
+b. What endpoints implement actions that are idempotent? nullipotent?
+	Get, put, and delete are idempotent because it doesn’t matter if you call them again once you called them 
+	once.  They won’t be updating anything after the first.  However, Get is nullipotent because it doesn’t 
+	matter if you call them 0 or 1 time.  It doesn’t update the server the first time its called.
+c. What evidence, if any, do you see of the commonly-cited impedance mismatch problem in object-relational information systems?
+	There is a lot of evidence of impedance mismatch, being encapsulation, and mapping object oriented to relational.
+d. Would the web service built in the lab be susceptible to SQL-injection attacks?
+	Yes it would be since it isn’t very secure.  It would be pretty easy to inject bad data into the database. 
+
