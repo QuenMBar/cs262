@@ -1,16 +1,17 @@
 package qmb2.cs262.calvin.edu.homework1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
 import java.util.Locale;
 
-/*
-Quentin Barnes
-Class that handles grabbing the values from the inputs and the selected operator and giving an output
+/**
+*Quentin Barnes
+*Class that handles grabbing the values from the inputs and the selected operator and giving an output
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
     private EditText val2Text;
     private Spinner opSelect;
     private TextView outputCalc;
+
+    /**
+     * When the app is opened and the activity is created, and references
+     * to the necessary views are assigned
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         opSelect = findViewById(R.id.op_select);
         outputCalc = findViewById(R.id.calcOutputText);
     }
+
+    /**
+     * When the 'calculate' button is pressed, a calculation is performed
+     * depending on the values in the two EditText views and operator in the spinner
+     * @param view
+     */
 
     public void performCalculation(View view) {
         String val1 = val1Text.getText().toString();

@@ -1,0 +1,10 @@
+Quentin Barnes
+
+Changes to code:
+-Reformated code in both HW1 and HW2
+-Added comments to homework 1 MainActivity
+-Added comments to homework 2 MainActivity and NetworkUtils
+-Fixed typos in HW2
+-Removed unused button in MainActivity HW2
+-Fixed EmptyCatchBlock in MainActivity HW2
+
