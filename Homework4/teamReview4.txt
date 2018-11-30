@@ -1,0 +1,5 @@
+a. Write a one-paragraph review of their user test. Was it well-planned and executed? Was there a sufficient amount of system functionality to test?
+	The user test was well implimented.  It ran well and i had most of the functionality ready to be tested.  They were well prepared and it didnt seem like anything took them by suprise.
+
+b. Has there been an appropriate amount of code pushed into their client repo?
+	Yes, it seems like theyre all contributing and its all coming together.
