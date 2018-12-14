@@ -1,0 +1,16 @@
+Do their project management materials show the appropriate amount of activity throughout the 
+semester? Base this on your previous reviews and your most recent observations.
+	Their trello shows that they have all put in a good amount of hours into their projects as a 
+	whole, and that theyre all working together as a team to finish it up.  Their github shows that 
+	alot of them have been active on it, and that theyve all been pretty active.
+
+Was their final presentation effective? How would you rate their presentation relative to both their 
+previous presentation and to the other final presentations?
+	There final presentation was very effective. First of all, they were really energetic about their app 
+	and clearly had rehersed their presentation alot.  It was good that they got the crowd involved with the quiz.
+	The app as a whole was really cleaned up compared to past versions.  However, there were a few bugs with the
+	database element.  Also the actual dog at the end was a good touch.
+
+Review of their final application. Base this on their final presentation demo and their submitted code.
+	Their final application looks good.  As long as the bug with there database is fixable, i think they
+	have a really solid app.  Their github code looks really profesional, and is well documented.
